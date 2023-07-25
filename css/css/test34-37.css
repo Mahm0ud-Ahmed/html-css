@@ -1,0 +1,107 @@
+body {
+  font-family: sans-serif;
+}
+
+.empty-test1,
+.empty-test2,
+.empty-test3 {
+  width: 300px;
+  height: 60px;
+  background-color: #eee;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+:empty {
+  background-color: red;
+}
+
+/* Test 2 */
+
+.before-test {
+  background-color: #eee;
+  padding: 20px;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+.before-test::first-letter {
+  visibility: hidden;
+};
+
+.before-test::before {
+  background-color: red;
+  color: white;
+  content: "1";
+  position: absolute;
+  padding: 12px 10px;
+  left: -16px;
+  top: 6px;
+}
+
+/* Test 3 */
+
+.arrow-test {
+  margin-bottom: 48px;
+  padding: 12px;
+  background-color: #eee;
+  text-align: center;
+  margin: 24px auto;
+  width: 350px;
+  position: relative;
+  border-left: solid 4px rebeccapurple;
+}
+
+.arrow-test::before {
+  content: attr(data-person);
+  background-color: #eee;
+  width: 52px;
+  text-align: center;
+  padding: 8px;
+  position: absolute;
+  left: -92px;
+  bottom: 4px;
+}
+
+.arrow-test::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 14px solid;
+  border-color: transparent gold transparent transparent;
+  position: absolute;
+  left: -32px;
+  bottom: 6px;
+}
+
+/* Test 4 */
+
+.counter-test {
+  counter-increment: member-counter;
+  /* width: 350px; */
+  background-color: #eee;
+  padding: 24px 72px;
+  position: relative;
+}
+
+.counter-test::before{
+  content: counter(member-counter);
+  background-color: red;
+  color: white;
+  padding: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.counter-test::after{
+  content: "";
+  border: red solid 4px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}

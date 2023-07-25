@@ -1,0 +1,277 @@
+body {
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.test-shadow {
+  height: 200px;
+  width: 200px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto;
+  color: orangered;
+  box-shadow: 12px 0px 0px orangered, -12px 0px 0px blueviolet;
+  font-weight: bold;
+  font-size: 22px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.parent{
+  display: flex;
+  width: 600px;
+  height: 300px;
+  background-color: #eee;
+  margin: 12px auto;
+  padding: 12px;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.parent div{
+  flex-basis: calc(94% / 3);
+  text-align: center;
+  background-color: orangered;
+  padding: 12px 0px;
+  color: white;
+}
+
+/* Test 3 */
+.parent2{
+  display: flex;
+  flex-direction: column-reverse;
+  width: 600px;
+  height: 300px;
+  background-color: #eee;
+  margin: 12px auto;
+  padding: 12px;
+  flex-wrap: wrap-reverse;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.parent2 div{
+  background-color: indigo;
+  width: calc(96% / 3);
+  color: white;
+  display: flex;
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.two{
+  flex-basis: calc(100% / 2);
+  order: 3;
+}
+
+.three{
+  order: 4;
+}
+
+.four{
+  order: 2;
+  flex-basis: calc(100% / 2);
+}
+
+.five{
+  flex-basis: calc(100% / 2);
+  order: 5;
+}
+
+.six{
+  flex-basis: calc(100% / 2);
+  order: 6;
+}
+
+/* Test 4 */
+
+.parent3{
+  display: flex;
+  width: 600px;
+  height: 300px;
+  background-color: #eee;
+  margin: 12px auto;
+  padding: 12px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.parent3 div{
+  flex-basis: calc(100% / 3);
+  background-color: teal;
+  padding: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.two3{
+  align-self: flex-start;
+  width: calc(100% /2);
+}
+
+/* Test 5 */
+
+.parent4{
+  display: flex;
+  width: 600px;
+  height: 300px;
+  background-color: #eee;
+  margin: 12px auto;
+  padding: 12px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.parent4 div{
+  height: 50%;
+  width: 100px;
+  padding: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one4{
+  order: 2;
+  background-color: red;
+}
+
+.two4{
+  align-self: flex-end;
+  order: 3;
+  background-color: greenyellow;
+}
+
+.three4{
+  order: 4;
+  background-color: indianred;
+}
+
+.four4{
+  order: 1;
+  align-self: flex-end;
+  background-color: teal;
+}
+
+/* Test 6 */
+
+:root{
+  --mainColor: #eee;
+  --secondColor: #ddd;
+  --basePadding: 16px;
+  --smallHeight: 6%;
+
+}
+
+.page{
+  background-color: var(--mainColor);
+  padding: var(--basePadding);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page div{
+  display: flex;
+}
+
+.page .header{
+  align-items: center;
+  justify-content: space-between;
+  height: var(--smallHeight);
+}
+
+.logo{
+  background-color: var(--secondColor);
+  flex-basis: 8%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.page .header ul{
+  background-color: var(--secondColor);
+  display: flex;
+  margin: 0px;
+  height: 100%;
+  list-style-type: none;
+  padding-inline: 0px;
+  flex-basis: 90%;
+  justify-content: flex-end;
+  align-items: center;
+  /* padding: 16px; */
+}
+
+.links li{
+  display: flex;
+  padding: 0px 16px;
+  height: 100%;
+  align-items: center;
+  transition: background-color 0.5s linear;
+  -webkit-transition: background-color 0.5s linear;
+  -moz-transition: background-color 0.5s linear;
+  -ms-transition: background-color 0.5s linear;
+  -o-transition: background-color 0.5s linear;
+}
+
+.page .main-area{
+  justify-content: space-between;
+  flex-basis: calc(100% - 16%);
+}
+
+.page .main-area div{
+  background-color: var(--secondColor);
+  padding: 16px;
+}
+
+.content{
+  flex-basis: 70%;
+}
+
+.sidebar{
+  flex-basis: 29%;
+}
+
+.page .footer{
+  background-color: var(--secondColor);
+  justify-content: center;
+  align-items: center;
+  height: var(--smallHeight);
+  justify-content: space-between;
+}
+
+.page .footer div{
+  display: flex;
+  padding: 0px 16px;
+  height: 100%;
+  align-items: center;
+}
+
+.links li:hover{
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+

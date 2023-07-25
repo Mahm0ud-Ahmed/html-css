@@ -1,0 +1,133 @@
+/* Test 13 : 16 */
+.parent .child .title {
+  color: red;
+}
+
+.parent .title {
+  color: blue;
+}
+
+.title,
+p {
+  color: green;
+}
+
+.a-div,
+.b-div,
+.c-div,
+.d-div {
+  padding: 12px;
+  background-color: #eee;
+  margin-bottom: 4px;
+  max-width: 400px;
+  max-height: 50px;
+  width: fit-content;
+  overflow: hidden;
+}
+
+/* Test 17 : 21 */
+
+.a-h1 {
+  /* box-shadow: red; */
+  text-shadow: 2px 2px 2px red, 5px 8px 2px blue, 8px 12px 2px green;
+  font-size: 78px;
+}
+
+.one {
+  text-transform: uppercase;
+}
+
+.two {
+  text-transform: capitalize;
+}
+
+.three{
+  text-transform: lowercase;
+}
+
+.e-div{
+  background-color: #eee;
+  width: 400px;
+  margin: 8px 0px;
+  padding: 4px;
+
+}
+.f-div{
+  background-color: #eee;
+  width: 400px;
+  height: 24px;
+  margin: 8px 0px;
+  padding: 4px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.g-div{
+  background-color: #eee;
+  width: 400px;
+  margin: 8px 0px;
+  padding: 4px;
+  height: 24px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.link-test{
+  background-color: green;
+  padding: 16px;
+  margin: 8px;
+  display: inline-block;
+  border-bottom: 8px solid red;
+  text-decoration: none;
+  font-size: 32px;
+  color: white;
+  text-transform: capitalize;
+  /* text-align: center;
+  align-items: center;
+  align-content: center;
+  align-content: center; */
+}
+
+/* Test 22 : 26 */
+
+div{
+  border: 4px solid blue;
+  padding: 24px;
+  text-align: center;
+}
+
+.test-inherit{
+  border: inherit;
+  padding: inherit;
+  background-color: #eee;
+}
+
+.test-font1{
+  font-family: 'Open Sans', sans-serif;
+}
+.test-font2{
+  font-family: 'Cairo', sans-serif;
+}
+.test-font3{
+  font-family: 'Jomhuria', cursive;
+}
+
+.test-font1, .test-font2, .test-font3{
+  text-align: center;
+}
+
+.test-font-size1{
+  font-size: 2.5rem;
+}
+.test-font-size2{
+  font-size: 2rem;
+}
+.test-font-size3{
+  font-size: 1.5rem;
+}
+
+.test-font-size1, .test-font-size2, .test-font-size3{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,162 @@
+/* div{
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.green{
+  background-color: green;
+  left: 20px;
+  top: 20px;
+  z-index: 30;
+}
+
+.red{
+  background-color: red;
+  z-index: 40;
+  left: 30px;
+  top: 30px;
+}
+
+.blue{
+  background-color: blue;
+  left: 10px;
+  top: 10px;
+  z-index: 20;
+}
+
+.black{
+  background-color: black;
+  left: 10px;
+  top: 20px;
+  z-index: 10;
+} */
+
+/* body{
+  position: absolute;
+} */
+
+/* div{
+  width: 400px;
+  background-color: #eee;
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  border: 2px solid;
+  border-color: red blue;
+  position: relative;
+}
+
+div span{
+  background-color: blue;
+  color: white;
+  padding: 3px 8px;
+  position: absolute;
+  width: 20px;
+}
+
+.top-left{
+  top: -15px;
+  left: -15px;
+  border-right: solid 2px red;
+}
+
+.top-right{
+  top: -15px;
+  right: -15px;
+  border-left: solid 2px red;
+}
+
+.bottom-right{
+  bottom: -15px;
+  right: -15px;
+  border-left: solid 2px red;
+}
+
+.bottom-left{
+  bottom: -15px;
+  left: -15px;
+  border-right: solid 2px red;
+} */
+
+/* Table Test */
+
+body {
+  font-family: sans-serif;
+}
+
+/* .list {
+  width: 400px;
+  padding: 0px;
+}
+
+.first-li-element,
+.second-li-element,
+.third-li-element {
+  font-size: 1.5em;
+  background-color: #eee;
+  list-style-type: none;
+  padding: 8px;
+  margin: 16px auto;
+}
+
+.lis .first-li-element ol,
+.lis .second-li-element ol {
+  margin: 12px auto;
+}
+
+.third-li-element ul{
+  list-style-position: inside;
+  padding: 0px;
+  margin: 10px auto;
+}
+
+.insid-li-element {
+  background-color: #fff;
+  padding: 12px;
+  margin: 8px;
+} */
+
+table{
+  width: 700px;
+  border-bottom: solid 4px greenyellow;
+  border-spacing: 0px;
+  text-align: center;
+}
+
+table caption{
+  font-weight: bold;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+button {
+  width: 56px;
+  height: 24px;
+  margin: auto 2px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+th{
+  padding: 12px 20px;
+  background-color: #404040;
+  color: white;
+  border: 1px solid white;
+}
+
+td{
+  padding: 12px 20px;
+  background-color: #eee;
+  color: black;
+  border: 1px solid white;
+}
+
+.view-btn{
+  background-color: #02a8f4;
+}
+
+.delete-btn{
+  background-color: #e93262
+}

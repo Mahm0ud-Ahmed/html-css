@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test 27 : 30</title>
+</head>
+
+<body>
+    <form action="test27-30.html" method="get">
+        <div>
+            <label for="username">UserName: </label>
+            <br>
+            <input id="username" type="text" name="username" autofocus minlength="5" maxlength="20" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">UserName: </label>
+            <br>
+            <input id="email" type="email" name="mail" value="o@o.com" readonly>
+        </div>
+        <input type="text" name="token" hidden value="b92f1fc2fce391ad7af633723afd3055">
+        <br>
+        <section>
+            <label>Skills</label>
+            <div>
+                <input id="oop" type="checkbox" value="1" name="skills" checked>
+                <label for="oop">OOP</label>
+            </div>
+            <div>
+                <input id="ds" type="checkbox" value="2" name="skills">
+                <label for="ds">DS</label>
+            </div>
+            <div>
+                <input id="dp" type="checkbox" value="3" name="skills">
+                <label for="dp">DP</label>
+            </div>
+        </section>
+        <br>
+        <div>
+            <label for="my_job"> Your Job</label>
+            <br>
+            <select name="job" id="my_job">
+                <option value="1" selected>Eng</option>
+                <option value="2">Tec</option>
+                <option value="3">Ai</option>
+                <option value="4">ML</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="book"> Chose Book: </label>
+            <select name="book" id="book">
+                <optgroup label="PHP">
+                    <option value="1">v5.0</option>
+                    <option value="2">v6.0</option>
+                    <option value="3">v7.0</option>
+                    <option value="4">v8.0</option>
+                </optgroup>
+                <optgroup label="Python">
+                    <option value="1">v5.0</option>
+                    <option value="2">v6.0</option>
+                    <option value="3">v7.0</option>
+                    <option value="4">v8.0</option>
+                </optgroup>
+            </select>
+        </div>
+        <hr>
+        <textarea name="brief" id="brief" cols="30" rows="10" placeholder="Write Here Why You Want To Learn Programming"></textarea>
+        <br>
+        <br>
+        <input type="submit" value="send">
+        <input type="reset" value="Empty">
+
+    </form>
+</body>
+
+</html>

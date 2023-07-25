@@ -1,0 +1,73 @@
+.parent {
+  width: 1000px;
+  background-color: #efef;
+}
+
+/* .full-width,
+.child-one,
+.child-two,
+.child-three {
+  margin-top: 15px;
+} */
+
+.full-width,
+.one1,
+.one2,
+.one3,
+.two1,
+.two2,
+.three1,
+.three2,
+.three3,
+.three3,
+.three4 {
+  background-color: #eee;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  margin-left: 15px;
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.full-width {
+  width: calc((1000px - 30px) / 1);
+}
+
+.child-one div {
+  width: calc((1000px - 60px) / 3);
+}
+
+.child-two div {
+  width: calc((1000px - 45px) / 2);
+}
+
+.child-three div {
+  width: calc((1000px - 75px) / 4);
+  margin-bottom: 15px;
+}
+
+/* ---------------------------------------- */
+
+.test-decor div {
+  margin: 20px auto;
+  width: 300px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 20px;
+  color: black;
+}
+
+.normal {
+  background-color: rgb(135 133 133);
+}
+
+.one {
+  background-color: rgb(135 133 133 / 10%);
+}
+.two {
+  background-color: rgb(135 133 133);
+  opacity: 0.1;
+}
