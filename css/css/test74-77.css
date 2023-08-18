@@ -1,0 +1,299 @@
+body {
+  font-family: sans-serif;
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.test-1 {
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  border: 6px solid red;
+  border-left-color: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: multi-spin 1s linear infinite;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -webkit-animation: multi-spin 1s linear infinite;
+}
+
+.test-1:hover {
+  animation-play-state: paused;
+}
+
+.test-1::before,
+.test-1::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid blue;
+  border-right-color: transparent;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.test-1::after {
+  width: 78px;
+  height: 78px;
+  border-color: orange;
+  border-top-color: transparent;
+}
+
+@keyframes multi-spin {
+  to {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+  }
+}
+
+/* Test 2 */
+.test-2 {
+  width: 50px;
+  height: 50px;
+  margin: 0px auto;
+  border: 6px solid red;
+  border-bottom-color: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-play-state: paused;
+  animation-name: different-spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.test-2:hover,
+.test-2:hover::before,
+.test-2:hover::after {
+  animation-play-state: running;
+}
+
+.test-2::before,
+.test-2::after {
+  content: "";
+  position: absolute;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 6px solid blue;
+  border-bottom-color: transparent;
+  animation-play-state: paused;
+  animation-name: different-spin;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.test-2::after {
+  width: 78px;
+  height: 78px;
+  border-color: orange;
+  animation-duration: 3s;
+  border-bottom-color: transparent;
+}
+
+@keyframes different-spin {
+  to {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+  }
+}
+
+/* Test 3 */
+
+.test-3 {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  display: block;
+  margin: 12px auto;
+  position: relative;
+  border: 6px black solid;
+  border-bottom-color: transparent;
+  animation-name: circular;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+@keyframes circular {
+  from {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+  }
+}
+
+/* Test 4 */
+
+.animat-char {
+  width: inherit;
+  height: inherit;
+  margin: 12px auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr) 72px repeat(5, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  position: relative;
+}
+
+.animat-char div {
+  background-color: black;
+}
+
+.e1 {
+  grid-area: 2 / 1 / span 9 / span 1;
+}
+.e2 {
+  grid-area: 2 / 2 / span 1 / span 4;
+}
+
+.e3 {
+  grid-area: 6 / 2 / span 1 / span 4;
+}
+
+.e4 {
+  grid-area: 10 / 2 / span 1 / span 4;
+}
+
+.l1 {
+  grid-area: 2 / 7 / span 9 / span 1;
+}
+
+.l2 {
+  grid-area: 10 / 8 / span 1 / span 4;
+}
+
+.animat-char::before {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  top: 12%;
+  left: 45%;
+  animation-name: transitionContainer1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+.animat-char::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background-color: white;
+  bottom: 2.5%;
+  right: 1.5%;
+  opacity: 0;
+  animation-name: transitionContainer2;
+  animation-delay: 6s;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+}
+
+@keyframes transitionContainer2 {
+  5% {
+    opacity: 1;
+    bottom: 2.5%;
+    right: 1.5%;
+  }
+  50% {
+    opacity: 1;
+    bottom: 2.5%;
+    right: 42%;
+  }
+  75% {
+    opacity: 1;
+    bottom: 82%;
+    right: 42%;
+  }
+  100% {
+    opacity: 0;
+    bottom: 82%;
+    right: 42%;
+  }
+}
+
+@keyframes transitionContainer1 {
+  10% {
+    left: 2.5%;
+    top: 12%;
+  }
+  20% {
+    left: 2.5%;
+    top: 52%;
+  }
+  30% {
+    left: 45%;
+    top: 52%;
+  }
+  40% {
+    left: 2.5%;
+    top: 52%;
+  }
+  50% {
+    left: 2.5%;
+    top: 92%;
+  }
+  60% {
+    left: 45%;
+    top: 92%;
+  }
+  70% {
+    left: 2.5%;
+    top: 92%;
+  }
+  80% {
+    left: 2.5%;
+    top: 12%;
+  }
+  100% {
+    left: 45%;
+    top: 12%;
+  }
+}

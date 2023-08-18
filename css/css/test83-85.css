@@ -1,0 +1,126 @@
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  width: 100vw;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+/* Test 1 */
+@media print {
+  .assign-one{
+    font-size: 40px;
+  }
+}
+
+/* Test 2 */
+
+.test2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+  flex-wrap: wrap;
+}
+
+.test2 div{
+  background-color: #eee;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.title{
+  margin-bottom: 6px;
+}
+
+@media (max-width: 767px) {
+  .test2 div{
+    width: calc(100%);
+  }
+  .title{
+    color: black;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .test2 div{
+    width: calc(50% - 10px);
+  }
+  .title{
+    color: red;
+  }
+}
+
+@media (min-width: 1200px) {
+  .test2 div{
+    width: calc((100% / 4) - 10px);
+  }
+  .title{
+    color: green;
+  }
+}
+
+/* Test 3 */
+
+.test3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px;
+  flex-wrap: wrap;
+}
+
+.test3 div{
+  background-color: #eee;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.test3 .div1:not(.div3){
+  width: 100%;
+}
+
+.title2{
+  margin-bottom: 6px;
+}
+
+@media (max-width: 767px) {
+  .test3 div{
+    width: calc(100%);
+  }
+  .title2{
+    color: black;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .test3 div{
+    width: calc((100% / 3) - 10px);
+  }
+  .title2{
+    color: red;
+  }
+}
+
+@media (min-width: 1200px) {
+  .test3 div{
+    width: calc((100% / 2) - 10px);
+  }
+  .test3 .div3{
+    width: 100%;
+  }
+  .title2{
+    color: green;
+  }
+}
