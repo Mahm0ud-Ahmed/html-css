@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --main_color: #3b74ba;
+  --radius: 16px;
+}
+
+.main {
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 700px;
+  height: 450px;
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 0px 8px 4px #ddd;
+  padding: 24px 54px;
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+}
+
+@media (max-width: 767px) {
+  .container {
+    /* width: 90%;
+    height: 55%; */
+    padding: 24px 12px;
+    margin: 0px 16px;
+  }
+}
+
+/* @media (min-width: 767px) and (max-width: 1200px) {
+  .container {
+    width: 700px;
+  height: 450px;
+  }
+} */
+
+.container::before {
+  content: "";
+  background-image: url("image/person-blue-shirt.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -110px;
+  left: calc(50% - (124px / 2));
+  right: calc(50% - (124px / 2));
+  width: 124px;
+  height: 135px;
+}
+
+.container::after {
+  content: "A+";
+  position: absolute;
+  bottom: -24px;
+  right: 24px;
+  padding: 16px;
+  color: white;
+  font-size: 1.2rem;
+  background-color: var(--main_color);
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+}
+
+.container h1 {
+  color: var(--main_color);
+  font-size: 32px;
+  padding-bottom: 8px;
+}
+
+.container p {
+  color: #ddd;
+  font-size: 18px;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 767px) {
+    .container h1 {
+      font-size: 24px;
+    }
+    .container p{
+        font-size: 14px;
+    }
+  }
+
+.container hr {
+  width: 100%;
+  border-top-color: #eee;
+  border-top-width: 2px;
+  margin: 24px 0;
+}
+
+.container div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #eee;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: var(--radius);
+  -webkit-border-radius: var(--radius);
+  -moz-border-radius: var(--radius);
+  -ms-border-radius: var(--radius);
+  -o-border-radius: var(--radius);
+}
+
+h4 {
+  font-weight: 300;
+}
